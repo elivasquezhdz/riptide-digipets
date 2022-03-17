@@ -4,6 +4,14 @@ import './App.css';
 import idl from './idl.json';
 import kp from './keypair.json'
 import { Buffer } from 'buffer';
+import huevo from './huevo1x.png';
+import peso from './10peso1x.png';
+import angelica from './angelica1x.png';
+import charisma from './charisma.png';
+import coolness from './coolness.png';
+import group from './group.png';
+import magic from './magic.png';
+
 window.Buffer = Buffer;
 
 
@@ -158,29 +166,16 @@ const renderConnectedContainer = () => {
 	else {
     return(
       <div className="connected-container">
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            sendGif();
-          }}
-        >
-          <input
-            type="text"
-            placeholder="Enter gif link!"
-            value={inputValue}
-            onChange={onInputChange}
-          />
-          <button type="submit" className="cta-button submit-gif-button">
-            Submit
-          </button>
-        </form>
-        <div className="gif-grid">
+      
 					{/* We use index as the key instead, also, the src is now item.gifLink */}
-          {gifList.map((item, index) => (
-            <div className="gif-item" key={index}>
-              <img src={item.gifLink} />
-            </div>
-          ))}
+            <div> <img src={peso}></img> </div>
+            <div> <img src={group}></img> </div>
+            <div> <img src={angelica}></img> </div>
+            <div> <img src={magic}></img> </div>
+            <div> <img src={charisma}></img> </div>
+            <div> <img src={coolness}></img> </div>
+     
+       <div className="gif-grid"> 
         </div>
       </div>
     )
@@ -227,7 +222,7 @@ const getGifList = async() => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header">Login to DigiPets </p>
+          <p className="header">Welcome to DigiPets </p>
           <p className="sub-text">
            🥚🦢
           </p>
